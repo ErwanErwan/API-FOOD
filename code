@@ -6,10 +6,9 @@ response = requests.get(url)
 data = json.loads(response.text)
 print(data)
 
-def produit():
-    info=data["code"]["_keywords"]
-    print(info)
+def produit(info):
+    inf=data[str(info)]
+    print(inf)
 
-#i=0737628064502
-#produit(i)
-produit()
+produit("code")
+produit("product")
