@@ -1,5 +1,6 @@
 import requests
 import json
+import interface
 
 barre=int(input("Code Barre : "))
 
@@ -10,13 +11,18 @@ data = json.loads(response.text)
 
 prod = data["product"]["id"]
 
+def nom():
+    print(data["product"]["product_name_fr"])
+
 def code():
     print(data["product"]["id"])
 
 
 def keyword():
+    mot=""
     for i in range(len(data["product"]["_keywords"])):
-        print(data["product"]["_keywords"][i])
+        mot=mot+" "+str(data["product"]["_keywords"][i])
+    print(str(mot)) 
 
 
 def allergen():
@@ -27,7 +33,10 @@ def brand():
 
 def nutriscore():
     print(data["product"]["nutrition_grade_fr"])
-    
+
+
+nom()
+print("---------")
 code()
 print("---------")
 keyword()
@@ -37,7 +46,3 @@ print("---------")
 brand()
 print("---------")
 nutriscore()
-
-
-def nom():
-    print(data["product"]["product_name_fr"])
