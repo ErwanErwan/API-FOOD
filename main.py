@@ -34,6 +34,11 @@ def brand():
 def nutriscore():
     return data["product"]["nutrition_grade_fr"]
 
+##############################################
+
+def sucre():
+    return data["product"]["nutriments"]["sugars_100g"]
+
 
 print(nom())
 print("---------")
