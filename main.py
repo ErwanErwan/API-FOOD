@@ -1,8 +1,9 @@
-
 import requests
 import json
 
-url = "https://world.openfoodfacts.org/api/v0/product/3017620425035.json" 
+barre=int(input("Code Barre : "))
+
+url = "https://world.openfoodfacts.org/api/v0/product/"+str(barre)+".json" 
 response = requests.get(url)
 data = json.loads(response.text)
 #print(data)
@@ -23,6 +24,9 @@ def allergen():
 
 def brand():
     print(data["product"]["brands"])
+
+def nutriscore():
+    print(data["product"]["nutrition_grade_fr"])
     
 code()
 print("---------")
@@ -31,3 +35,5 @@ print("---------")
 allergen()
 print("---------")
 brand()
+print("---------")
+nutriscore()
