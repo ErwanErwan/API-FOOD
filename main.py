@@ -37,3 +37,7 @@ print("---------")
 brand()
 print("---------")
 nutriscore()
+
+
+def nom():
+    print(data["product"]["product_name_fr"])
