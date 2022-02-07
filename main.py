@@ -12,10 +12,10 @@ data = json.loads(response.text)
 prod = data["product"]["id"]
 
 def nom():
-    print(data["product"]["product_name_fr"])
+    return data["product"]["product_name_fr"]
 
 def code():
-    print(data["product"]["id"])
+    return data["product"]["id"]
 
 
 def keyword():
@@ -26,23 +26,23 @@ def keyword():
 
 
 def allergen():
-    print(data["product"]["allergens_from_ingredients"])
+    return data["product"]["allergens_from_ingredients"]
 
 def brand():
-    print(data["product"]["brands"])
+    return data["product"]["brands"]
 
 def nutriscore():
-    print(data["product"]["nutrition_grade_fr"])
+    return data["product"]["nutrition_grade_fr"]
 
 
-nom()
+print(nom())
 print("---------")
-code()
+print(code())
 print("---------")
-keyword()
+print(keyword())
 print("---------")
-allergen()
+print(allergen())
 print("---------")
-brand()
+print(brand())
 print("---------")
-nutriscore()
+print(nutriscore())
