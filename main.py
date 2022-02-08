@@ -46,7 +46,16 @@ def allergen():
 def sucre():
     return data["product"]["nutriments"]["sugars_100g"]
 
+#########################################
 
+def image():
+    img_url = data["product"]["image_front_small_url"]
+    print(img_url)
+    response= requests.get(img_url)
+    img = Image.open(BytesIO(response.content))
+    img.show()
+
+    ############################## 
 print(nom())
 print("---------")
 print(code())
