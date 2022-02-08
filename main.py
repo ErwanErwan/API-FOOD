@@ -58,3 +58,9 @@ print("---------")
 print(brand())
 print("---------")
 print(nutriscore())
+
+
+#########################
+
+def image():
+    return data["product"]["image_front_small_url"]
