@@ -34,6 +34,13 @@ def brand():
 def nutriscore():
     return data["product"]["nutrition_grade_fr"]
 
+#########################
+
+def allergen():
+    if data["product"]["allergens_from_ingredients"]:
+        return data["product"]["allergens_from_ingredients"]
+    else:
+        return "Ce produit ne présente pas d'allergies."
 ##############################################
 
 def sucre():
