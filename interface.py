@@ -3,7 +3,7 @@ import tkinter
 base = tkinter.Tk()
 base.title("FoodChecker")
 base.geometry("500x700")
-base.configure(bg="Green")
+base.configure(bg="Grey")
 
 page_principale = tkinter.Frame(base)
 tkinter.Label(page_principale, text='Quel aliment recherchez vous ? :').pack(side="left")
