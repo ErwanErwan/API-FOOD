@@ -159,14 +159,7 @@ produit_ex1.pack()
 produit_ex2.pack()
 produit_ex3.pack()
 
-"""
-def histoiree():
-    global histoire
-    for i in range(histoire):
-        bouton = tkinter.Button(page_principale, fg='Black', text=historique[i][1], command=Product(historique[i][0]))
-        bouton.config(width=30, height=2)
-        return bouton.pack()
-"""
+
 barre = barre_search
 
 
